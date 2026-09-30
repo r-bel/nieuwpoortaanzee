@@ -2,14 +2,13 @@
 <title>Goethalsstraat 12 Nieuwpoort</title>
 <meta name="description" content="Te koop: instapklaar, gemeubeld appartement met 1 slaapkamer, westgericht balkon met zijdelings zeezicht en ruime private garage in Nieuwpoort-Bad. 47 m², 3e verdieping met lift, EPC C. Vraagprijs € 294.000. Rechtstreeks van eigenaar.">
 <meta name="robots" content="index, follow">
-<!-- TODO: vervang door je eigen domein -->
-<link rel="canonical" href="https://www.goethalsstraat12.be/">
+<link rel="canonical" href="https://www.nieuwpoortaanzee.be/">
 <meta property="og:type" content="website">
 <meta property="og:locale" content="nl_BE">
 <meta property="og:title" content="Appartement met garage te koop – Goethalsstraat 12, Nieuwpoort-Bad">
 <meta property="og:description" content="1 slaapkamer · 47 m² · balkon met zijdelings zeezicht · private garage · € 294.000 · rechtstreeks van eigenaar">
-<meta property="og:url" content="https://www.goethalsstraat12.be/">
-<meta property="og:image" content="https://www.goethalsstraat12.be/img/foto-03.jpg">
+<meta property="og:url" content="https://www.nieuwpoortaanzee.be/">
+<meta property="og:image" content="https://www.nieuwpoortaanzee.be/img/foto-03.jpg">
 <meta name="twitter:card" content="summary_large_image">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -19,9 +18,9 @@
   "@context": "https://schema.org",
   "@type": "RealEstateListing",
   "name": "Instapklaar appartement met garage op wandelafstand van zee – Nieuwpoort-Bad",
-  "url": "https://www.goethalsstraat12.be/",
+  "url": "https://www.nieuwpoortaanzee.be/",
   "datePosted": "2026-09-30",
-  "image": ["https://www.goethalsstraat12.be/img/foto-03.jpg","https://www.goethalsstraat12.be/img/foto-01.jpg","https://www.goethalsstraat12.be/img/foto-12.jpg"],
+  "image": ["https://www.nieuwpoortaanzee.be/img/foto-03.jpg","https://www.nieuwpoortaanzee.be/img/foto-01.jpg","https://www.nieuwpoortaanzee.be/img/foto-12.jpg"],
   "offers": {
     "@type": "Offer",
     "price": 294000,
@@ -73,6 +72,8 @@
   --bg:#0F181B; --surface:#172327; --fg:#E6ECEB; --muted:#9AAAAE; --line:#2A3A3F;
   --accent:#4FC2BA; --accent-ink:#06201F; --flag:#F2C14E; --todo-bg:#3A300F; --todo-fg:#F6DB8E; color-scheme:dark}
 *{box-sizing:border-box}
+[hidden]{display:none!important}
+img{max-width:100%}
 body{background:var(--bg);color:var(--fg);font:400 1.0625rem/1.6 var(--body);margin:0}
 .wrap{max-width:1120px;margin:0 auto;padding-inline:clamp(16px,4vw,40px)}
 a{color:var(--accent)}
@@ -325,16 +326,16 @@ photos.slice(0,12).forEach(([n,c],i)=>{
   const b=document.createElement('button');
   b.setAttribute('aria-label','Vergroot: '+c);
   b.innerHTML=`<img src="img/foto-${n}.jpg" alt="${c}" loading="lazy" width="675" height="900">`;
-  b.onclick=()=>open(i);g.appendChild(b);
+  b.onclick=()=>openLb(i);g.appendChild(b);
 });
 const lb=document.getElementById('lb'),li=document.getElementById('lbImg'),lc=document.getElementById('lbCap');let cur=0;
 function show(i){cur=(i+photos.length)%photos.length;const[n,c]=photos[cur];li.src=`img/foto-${n}.jpg`;li.alt=c;lc.textContent=`${c} · ${cur+1}/${photos.length}`}
-function open(i){show(i);lb.hidden=false;document.getElementById('lbClose').focus()}
-function close(){lb.hidden=true}
-document.getElementById('lbClose').onclick=close;
+function openLb(i){show(i);lb.hidden=false;document.getElementById('lbClose').focus()}
+function closeLb(){lb.hidden=true}
+document.getElementById('lbClose').onclick=closeLb;
 document.getElementById('lbPrev').onclick=()=>show(cur-1);
 document.getElementById('lbNext').onclick=()=>show(cur+1);
-lb.onclick=e=>{if(e.target===lb)close()};
-document.addEventListener('keydown',e=>{if(lb.hidden)return;if(e.key==='Escape')close();if(e.key==='ArrowLeft')show(cur-1);if(e.key==='ArrowRight')show(cur+1)});
+lb.onclick=e=>{if(e.target===lb)closeLb()};
+document.addEventListener('keydown',e=>{if(lb.hidden)return;if(e.key==='Escape')closeLb();if(e.key==='ArrowLeft')show(cur-1);if(e.key==='ArrowRight')show(cur+1)});
 </script>
 </body></html>
