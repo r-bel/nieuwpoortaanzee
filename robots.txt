@@ -1,4 +1,4 @@
 User-agent: *
 Allow: /
 
-Sitemap: https://nieuwpoortaanzee.be/sitemap.xml
+Sitemap: https://www.nieuwpoortaanzee.be/sitemap.xml
