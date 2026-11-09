@@ -189,6 +189,9 @@ footer{padding-block:24px;font:400 .8rem var(--mono);color:var(--muted)}
 .langs a{color:var(--muted);text-decoration:none;padding:.35em .45em;border-bottom:2px solid transparent}
 .langs a:hover{color:var(--fg)}
 .langs a[aria-current]{color:var(--fg);border-bottom-color:var(--accent)}
+.newtag{display:inline-block;margin:0 0 .7rem;background:#D7263D;color:#FFFFFF;font:600 .78rem/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;padding:.45em .75em;border-radius:2px}
+.price .was{position:relative;text-decoration:none;color:var(--muted);font:600 clamp(1.4rem,2.6vw,1.9rem)/1 var(--display);letter-spacing:.01em}
+.price .was::after{content:"";position:absolute;left:-6%;right:-6%;top:50%;border-top:3px solid #D7263D;transform:rotate(-14deg)}
 </style>
 </head><body>
 <header class="wrap bar">
@@ -206,7 +209,7 @@ footer{padding-block:24px;font:400 .8rem var(--mono);color:var(--muted)}
     <p class="eyebrow">Nieuwpoort-Bad · rechtstreeks van eigenaar</p>
     <h1>Instapklaar appartement in Nieuwpoort-Bad, <span>met eigen garage</span></h1>
     <p class="lede">Lichtrijk, gemeubeld appartement op de 3e verdieping, met westgericht balkon en zijdelings zeezicht. Op wandelafstand van strand, winkelstraat en horeca.</p>
-    <div class="price"><strong>€ 292.000</strong><small>vraagprijs · garage inbegrepen</small></div>
+    <p class="newtag">Nieuwe prijs</p><div class="price"><del class="was" title="Vorige prijs">€ 294.000</del><strong>€ 292.000</strong><small>vraagprijs · garage inbegrepen</small></div>
     <div class="cta">
       <a class="btn primary" href="#contact">Plan een bezoek</a>
       <a class="btn ghost" href="#fotos">Bekijk de foto's</a>

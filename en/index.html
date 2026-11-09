@@ -189,6 +189,9 @@ footer{padding-block:24px;font:400 .8rem var(--mono);color:var(--muted)}
 .langs a{color:var(--muted);text-decoration:none;padding:.35em .45em;border-bottom:2px solid transparent}
 .langs a:hover{color:var(--fg)}
 .langs a[aria-current]{color:var(--fg);border-bottom-color:var(--accent)}
+.newtag{display:inline-block;margin:0 0 .7rem;background:#D7263D;color:#FFFFFF;font:600 .78rem/1 var(--mono);letter-spacing:.1em;text-transform:uppercase;padding:.45em .75em;border-radius:2px}
+.price .was{position:relative;text-decoration:none;color:var(--muted);font:600 clamp(1.4rem,2.6vw,1.9rem)/1 var(--display);letter-spacing:.01em}
+.price .was::after{content:"";position:absolute;left:-6%;right:-6%;top:50%;border-top:3px solid #D7263D;transform:rotate(-14deg)}
 </style>
 </head><body>
 <header class="wrap bar">
@@ -206,7 +209,7 @@ footer{padding-block:24px;font:400 .8rem var(--mono);color:var(--muted)}
     <p class="eyebrow">Nieuwpoort-Bad · sold directly by the owner</p>
     <h1>Move-in ready apartment in Nieuwpoort-Bad, <span>with its own garage</span></h1>
     <p class="lede">Bright, furnished apartment on the 3rd floor, with a west-facing balcony and side sea view. A short walk from the beach, the shopping street, restaurants and bars.</p>
-    <div class="price"><strong>€ 292,000</strong><small>asking price · garage included</small></div>
+    <p class="newtag">New price</p><div class="price"><del class="was" title="Previous price">€ 294,000</del><strong>€ 292,000</strong><small>asking price · garage included</small></div>
     <div class="cta">
       <a class="btn primary" href="#contact">Book a viewing</a>
       <a class="btn ghost" href="#fotos">See the photos</a>
